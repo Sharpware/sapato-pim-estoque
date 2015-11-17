@@ -1,14 +1,11 @@
 package com.github.sharpware.pim.controller;
 
 import br.com.caelum.vraptor.Controller;
-import br.com.caelum.vraptor.Post;
+import br.com.caelum.vraptor.Get;
 
 @Controller
-public class estoqueController {
+public class EstoqueController {
     
-    @Post
-    public void inicio(){
-        System.out.println("Teste Estoque VRaptor 4.0... OK");
-    }
-    
+    @Get
+    public void inicio(){ }
 }
