@@ -1,11 +1,11 @@
 package com.github.sharpware.pim.controller;
 
 import br.com.caelum.vraptor.Controller;
-import br.com.caelum.vraptor.Get;
+import br.com.caelum.vraptor.Path;
 
 @Controller
 public class EstoqueController {
     
-    @Get
-    public void inicio(){ }
+    @Path("estoque/entrada")
+    public void entrada(){ }
 }
