@@ -7,6 +7,7 @@ package com.github.sharpware.pim.model;
 
 import java.util.Calendar;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 /**
  *
  * @author George
@@ -22,18 +23,22 @@ public class Produto {
     @Column(name="id")
     private Long id;
     
+    @NotNull(message="Nome deve ser preenchido")
     @Column(name="nome")
     private String nome;
     
+    @NotNull(message="Marca deve ser preenchida")
     @Column(name="marca")
     private String marca;
     
+    @NotNull(message="Tamanho deve ser preenchido")
     @Column(name="tamanho")
     private String tamanho;
     
     @Column(name="codigo_barras")
     private String codigoBarras;
     
+    @NotNull(message="Preço de custo deve ser preenchido")
     @Column(name="preco_custo")
     private double precoCusto;
     
