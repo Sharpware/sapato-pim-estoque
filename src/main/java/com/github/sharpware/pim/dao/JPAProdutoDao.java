@@ -56,5 +56,4 @@ public class JPAProdutoDao implements IDao<Produto>{
         return this.manager.createQuery("SELECT p FROM Produto p", Produto.class)
                             .getResultList();
     }
-    
 }

@@ -31,7 +31,6 @@ public class Produto {
     @Column(name="marca")
     private String marca;
     
-    @NotNull(message="Tamanho deve ser preenchido")
     @Column(name="tamanho")
     private String tamanho;
     
@@ -57,6 +56,9 @@ public class Produto {
     @Column(name="tipo_produto")
     private TipoProduto tipoProtudo;
 
+    @JoinColumn(name="fornecedor_id", referencedColumnName="fornecedor")
+    private Fornecedor fornecedor;
+    
     public long getId() {
         return id;
     }
@@ -136,4 +138,12 @@ public class Produto {
         this.tipoProtudo = tipoProtudo;
         return this;
     }
+    
+	public Fornecedor getFornecedor() {
+		return fornecedor;
+	}
+	public Produto setFornecedor(Fornecedor fornecedor) {
+		this.fornecedor = fornecedor;
+		return this;
+	}
 }
