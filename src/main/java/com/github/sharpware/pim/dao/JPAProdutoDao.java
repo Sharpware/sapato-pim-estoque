@@ -7,24 +7,30 @@ package com.github.sharpware.pim.dao;
 
 import static java.util.Objects.requireNonNull;
 
-import com.github.sharpware.pim.model.Produto;
 import java.util.List;
 import java.util.Optional;
+
+import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
+
+import com.github.sharpware.pim.model.Produto;
 
 
 /**
  *
- * @author root
+ * @author George
  */
-public class JPAProdutoDao implements IProdutoDao{
+@RequestScoped	
+public class JPAProdutoDao implements IDao<Produto>{
 
     private EntityManager manager;
 
     public JPAProdutoDao(EntityManager manager) {
         this.manager = manager;
     }
+    
+    public JPAProdutoDao() { }
     
     @Override
     public void salvar(Produto produto) {

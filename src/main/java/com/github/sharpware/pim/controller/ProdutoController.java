@@ -1,26 +1,29 @@
 package com.github.sharpware.pim.controller;
 
+import java.util.List;
+import java.util.Optional;
+
+import javax.inject.Inject;
+
+import com.github.sharpware.pim.annotation.Transacional;
+import com.github.sharpware.pim.dao.IDao;
+import com.github.sharpware.pim.model.Produto;
+
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.validator.Validator;
-import com.github.sharpware.pim.annotation.Transacional;
-import com.github.sharpware.pim.dao.IProdutoDao;
-import com.github.sharpware.pim.model.Produto;
-import java.util.List;
-import java.util.Optional;
-import javax.inject.Inject;
 
 @Controller
 public class ProdutoController {
 
-    private IProdutoDao dao;
+    private  IDao<Produto> dao;
     private Result result;
     private Validator validator;
     
     @Inject
-    public ProdutoController(IProdutoDao dao, Result result, Validator validator) {
+    public ProdutoController(IDao<Produto> dao, Result result, Validator validator) {
         this.dao = dao;
         this.result = result;
         this.validator = validator;
