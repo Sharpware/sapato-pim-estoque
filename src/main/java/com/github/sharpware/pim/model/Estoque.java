@@ -1,8 +1,7 @@
 package com.github.sharpware.pim.model;
 
-import java.util.ArrayList;
+
 import java.util.Calendar;
-import java.util.List;
 
 import javax.persistence.*;
 
@@ -15,10 +14,9 @@ public class Estoque {
     @Column(name="id")
     private Long id;
 
-    @OneToMany
-    @JoinColumn(name="produto_id")
-    private List<Produto> produtos;
-
+    @Column(name="produto_id")
+    private Produto produto; 
+    
     @Column(name="quantidade")
     private int quantidade;
 
@@ -26,10 +24,6 @@ public class Estoque {
     @Column(name="data_entrada")
     private Calendar dataEntrada;
 
-    public Estoque() {
-        this.produtos = new ArrayList<>();
-    }
-    
     public long getId() {
         return id;
     }
@@ -37,11 +31,11 @@ public class Estoque {
         this.id = id;
     }
 
-    public List<Produto> getProdutos() {
-        return produtos;
+    public Produto getProduto() {
+        return produto;
     }
-    public Estoque addProduto(Produto produto) {
-        produtos.add(produto);
+    public Estoque setProduto(Produto produto) {
+        this.produto = produto;
         return this;
     }
     

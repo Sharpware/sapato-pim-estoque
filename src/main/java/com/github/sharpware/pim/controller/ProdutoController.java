@@ -7,7 +7,6 @@ import javax.inject.Inject;
 
 import com.github.sharpware.pim.annotation.Transacional;
 import com.github.sharpware.pim.dao.IDao;
-import com.github.sharpware.pim.model.Fornecedor;
 import com.github.sharpware.pim.model.Produto;
 
 import br.com.caelum.vraptor.Controller;
@@ -44,6 +43,7 @@ public class ProdutoController {
     public void salvar(Produto produto) {
         this.validator.validate(produto);
         this.validator.onErrorUsePageOf(this).formulario();
+        
         this.dao.salvar(produto);
         this.result.redirectTo(this).formulario();
     }
@@ -54,6 +54,7 @@ public class ProdutoController {
         this.result.include("produtos", produtos);
     }
     
+    @Get("produtos/{id}")
     public void editar(Long id) throws Exception {
         try {
             Optional<Produto> produtoOptional = this.dao.buscarPorId(id);

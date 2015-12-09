@@ -29,7 +29,7 @@
 			<div class="col-md-5">
 				<div class="form-group">
 					<label for="nomeTbx">Nome do Produto</label> <input type="text"
-						class="produto.nome" value="${produto.nome}" />
+						class="form-control" name="produto.nome" value="${produto.nome}" />
 				</div>
 				<div class="form-group">
 					<label for="exampleInputName1">Tipo</label> <br> <select
@@ -49,27 +49,18 @@
 			</div>
 			<div class="col-md-5 col-md-offset-1">
 				<div class="form-group">
-					<label for="exampleInputName1">Marca</label> <br> <select
-						class="form-control">
-						<option>--Todos--</option>
-						<option>Adidas</option>
-						<option>Asics</option>
-						<option>Mizuno</option>
-						<option>Nike</option>
-						<option>Oakley</option>
-						<option>Olympikus</option>
-						<option>Puma</option>
-						<option>Timberland</option>
-					</select>
+					<label for="exampleInputName1">Marca</label> <br>
+					<input type="text" class="form-control" name="produto.marca"
+						value="${produto.marca}" />
 				</div>
 				<br>
 				<div class="radio borda">
 					<h4 class="text-center">Situação</h4>
 					<div class="col-md-offset-2">
-						<label class="col-md-12"> <input type="radio" name=""
-							id="ativoRb" value="" checked> Ativo
-						</label> <label> <input type="radio" name="" id="inativoRb"
-							value=""> Inativo
+						<label class="col-md-12"> <input type="radio"
+							name="situacao" id="ativoRb" value="" checked> Ativo
+						</label> <label> <input type="radio" name="situacao"
+							id="inativoRb" value=""> Inativo
 						</label>
 					</div>
 					<br>
@@ -80,38 +71,24 @@
 		<div class="row">
 			<div class="col-md-3">
 				<div class="form-group">
-					<label for="exampleInputName1">Tamanho</label> <br> <select
-						class="form-control">
-						<option>--Todos--</option>
-						<option>34-35</option>
-						<option>35-36</option>
-						<option>36-37</option>
-						<option>37-38</option>
-						<option>38-39</option>
-						<option>39-40</option>
-						<option>40-41</option>
-						<option>41-42</option>
-						<option>42-43</option>
-						<option>43-44</option>
-						<option>44-45</option>
-						<option>45+</option>
-					</select>
+					<label for="exampleInputName1">Tamanho</label> <br> <input
+						type="text" class="form-control" placeholder="00-00"
+						name="produto.tamanho" value="${produto.tamanho}" />
 				</div>
 			</div>
 
 			<div class="col-md-3 col-md-offset-1">
 				<div class="form-group">
 					<label for="telefoneComercialTbx">Código de barras</label> <input
-						type="text" class="form-control" id="telefoneComercialTbx"
-						placeholder="Telefone comercial" name="produto.codigoBarras"
+						type="text" class="form-control" name="produto.codigoBarras"
 						value="${produto.codigoBarras}" />
 				</div>
 			</div>
 			<div class="col-md-3 col-md-offset-1">
 				<div class="form-group">
 					<label for="celularTbx">Preço de Custo</label> <input type="text"
-						class="form-control" id="celularTbx" placeholder="Celular"
-						name="produto.precoCusto" value="${produto.precoCusto}" />
+						class="form-control" name="produto.precoCusto" placeholder="0,00"
+						value="${produto.precoCusto}" />
 				</div>
 			</div>
 		</div>

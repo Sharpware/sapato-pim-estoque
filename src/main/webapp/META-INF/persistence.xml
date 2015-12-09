@@ -19,12 +19,4 @@
             <property name="hibernate.format_sql" value="true"/>
         </properties>
     </persistence-unit>
-    <!-- 
-    <persistence-unit name="com.github.sharpware.pim_sapato-pim-gerencia_war_1.0-SNAPSHOTPU" transaction-type="JTA">
-      <provider>org.hibernate.ejb.HibernatePersistence</provider>
-      <properties>
-        <property name="javax.persistence.schema-generation.database.action" value="create"/>
-      </properties>
-    </persistence-unit>
-    -->
 </persistence>
