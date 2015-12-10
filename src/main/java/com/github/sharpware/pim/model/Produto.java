@@ -51,7 +51,7 @@ public class Produto {
     @Temporal(TemporalType.DATE)
     @Column(table="lista_preco", name="data_fim")
     private Calendar dataFim;
-
+    
     @Enumerated(EnumType.STRING)
     @Column(name="tipo_produto")
     private TipoProduto tipoProtudo;
@@ -62,7 +62,7 @@ public class Produto {
     @OneToOne
     @JoinColumn(name="fornecedor_id")
     private Fornecedor fornecedor;
-    
+        
     public long getId() {
         return id;
     }

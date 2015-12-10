@@ -49,8 +49,8 @@
 			</div>
 			<div class="col-md-5 col-md-offset-1">
 				<div class="form-group">
-					<label for="exampleInputName1">Marca</label> <br>
-					<input type="text" class="form-control" name="produto.marca"
+					<label for="exampleInputName1">Marca</label> <br> <input
+						type="text" class="form-control" name="produto.marca"
 						value="${produto.marca}" />
 				</div>
 				<br>
@@ -73,7 +73,8 @@
 				<div class="form-group">
 					<label for="exampleInputName1">Tamanho</label> <br> <input
 						type="text" class="form-control" placeholder="00-00"
-						name="produto.tamanho" value="${produto.tamanho}" data-mask="99-99" />
+						name="produto.tamanho" value="${produto.tamanho}"
+						data-mask="99-99" />
 				</div>
 			</div>
 
@@ -87,8 +88,9 @@
 			<div class="col-md-3 col-md-offset-1">
 				<div class="form-group">
 					<label for="celularTbx">Preço de Custo</label> <input type="text"
-						class="form-control" name="produto.precoCusto" placeholder="000,00"
-						value="${produto.precoCusto}" data-mask="000,00"/>
+						class="form-control" name="produto.precoCusto"
+						placeholder="000,00" value="${produto.precoCusto}"
+						data-mask="000,00" />
 				</div>
 			</div>
 		</div>

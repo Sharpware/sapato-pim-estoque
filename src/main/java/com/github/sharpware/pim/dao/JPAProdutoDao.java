@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
 
@@ -25,6 +26,7 @@ public class JPAProdutoDao implements IDao<Produto>{
 
     private EntityManager manager;
 
+    @Inject
     public JPAProdutoDao(EntityManager manager) {
         this.manager = manager;
     }

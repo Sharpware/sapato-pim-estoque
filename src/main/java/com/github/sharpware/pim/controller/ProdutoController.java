@@ -7,7 +7,9 @@ import javax.inject.Inject;
 
 import com.github.sharpware.pim.annotation.Transacional;
 import com.github.sharpware.pim.dao.IDao;
+import com.github.sharpware.pim.model.Fornecedor;
 import com.github.sharpware.pim.model.Produto;
+import com.github.sharpware.pim.model.TipoProduto;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
@@ -43,6 +45,12 @@ public class ProdutoController {
     public void salvar(Produto produto) {
         this.validator.validate(produto);
         this.validator.onErrorUsePageOf(this).formulario();
+        
+        produto.setTipoProtudo(TipoProduto.Basquete);
+        
+        Fornecedor fornecedor = new Fornecedor();
+        fornecedor.setId(1);
+        produto.setFornecedor(fornecedor);
         
         this.dao.salvar(produto);
         this.result.redirectTo(this).pesquisa();
