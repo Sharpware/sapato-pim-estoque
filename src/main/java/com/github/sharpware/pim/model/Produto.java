@@ -34,7 +34,7 @@ public class Produto {
     @Column(name="tamanho")
     private String tamanho;
     
-    @Column(name="codigo_barras")
+    @Column(name="codigo_barra")
     private String codigoBarras;
     
     @NotNull(message="Preço de custo deve ser preenchido")
@@ -56,7 +56,11 @@ public class Produto {
     @Column(name="tipo_produto")
     private TipoProduto tipoProtudo;
 
-    @JoinColumn(name="fornecedor_id", referencedColumnName="fornecedor")
+    @Column(name="descricao")
+    private String descricao;
+    
+    @OneToOne
+    @JoinColumn(name="fornecedor_id")
     private Fornecedor fornecedor;
     
     public long getId() {
@@ -138,6 +142,14 @@ public class Produto {
         this.tipoProtudo = tipoProtudo;
         return this;
     }
+    
+    public String getDescricao() {
+		return descricao;
+	}
+	public Produto setDescricao(String descricao) {
+		this.descricao = descricao;
+		return this;
+	}
     
 	public Fornecedor getFornecedor() {
 		return fornecedor;

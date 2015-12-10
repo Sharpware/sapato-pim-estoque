@@ -16,12 +16,11 @@ import javax.persistence.EntityNotFoundException;
 
 import com.github.sharpware.pim.model.Produto;
 
-
 /**
  *
  * @author George
  */
-@RequestScoped	
+@RequestScoped
 public class JPAProdutoDao implements IDao<Produto>{
 
     private EntityManager manager;

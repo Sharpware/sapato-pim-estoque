@@ -45,7 +45,7 @@ public class ProdutoController {
         this.validator.onErrorUsePageOf(this).formulario();
         
         this.dao.salvar(produto);
-        this.result.redirectTo(this).formulario();
+        this.result.redirectTo(this).pesquisa();
     }
 
     @Get

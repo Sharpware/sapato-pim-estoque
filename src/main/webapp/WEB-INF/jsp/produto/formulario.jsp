@@ -73,7 +73,7 @@
 				<div class="form-group">
 					<label for="exampleInputName1">Tamanho</label> <br> <input
 						type="text" class="form-control" placeholder="00-00"
-						name="produto.tamanho" value="${produto.tamanho}" />
+						name="produto.tamanho" value="${produto.tamanho}" data-mask="99-99" />
 				</div>
 			</div>
 
@@ -87,17 +87,17 @@
 			<div class="col-md-3 col-md-offset-1">
 				<div class="form-group">
 					<label for="celularTbx">Preço de Custo</label> <input type="text"
-						class="form-control" name="produto.precoCusto" placeholder="0,00"
-						value="${produto.precoCusto}" />
+						class="form-control" name="produto.precoCusto" placeholder="000,00"
+						value="${produto.precoCusto}" data-mask="000,00"/>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-11">
 				<div class="form-group">
-					<label for="observacaoTbx">Observação</label>
-					<textarea name="produto.observacao" class="form-control col-md-12"
-						rows="4">${produto.observacao}</textarea>
+					<label for="observacaoTbx">Descrição</label>
+					<textarea name="produto.descricao" class="form-control col-md-12"
+						rows="4">${produto.descricao}</textarea>
 				</div>
 			</div>
 		</div>

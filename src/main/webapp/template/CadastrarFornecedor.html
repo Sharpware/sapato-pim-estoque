@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interface Sharpware</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link href="css/sb-admin.css" rel="stylesheet">
+<link href="css/plugins/morris.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body style="font color: white">
+<div id="wrapper">
+<!--Menu feito para todas as paginas -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="index.html" class="navbar-brand"><strong><span style="color:#006CCA">Sharp</span><span style="color:#009D73">Ware</span></strong></a>
+</div>
+<ul class="nav navbar-right top-nav">
+<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-user"></i> Login
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+<li> <a href="#"><i class="fa fa-fw fa-power-off"></i> Sair</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="https://github.com/Sharpware">&nbsp;<i class="fa fa-github"></i> github</a></li>
+</ul>
+</li>
+</ul>
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+<ul class="nav navbar-nav side-nav" >
+<li>
+<a href="javascript:;" data-toggle="collapse" data-target="#down-cliente" ><i class="fa fa-users fa-lg"></i>&nbsp;&nbsp;Cliente <i class="fa fa-caret-down pull-right"></i></a>
+<ul id="down-cliente" class="collapse">
+<li><a href="PesquisarCliente.html"><i class="fa fa-search"></i>&nbsp;Pesquisar Cliente</a></li>
+<li><a href="CadastrarCliente.html"><i class="fa fa-user-plus"></i>&nbsp;Cadastrar Cliente</a></li>
+</ul>
+</li>
+<li>
+<a href="javascript:;" data-toggle="collapse" data-target="#down-fornecedor"><i class="fa fa-truck fa-lg"></i>&nbsp;&nbsp;Fornecedor <i class="fa fa-caret-down pull-right"></i></a>
+<ul id="down-fornecedor" class="collapse">
+<li><a href="PesquisarFornecedor.html"><i class="fa fa-search"></i>&nbsp;Pesquisar Fornecedor</a></li>
+<li><a href="CadastrarFornecedor.html"><i class="fa fa-ambulance"></i>&nbsp;Cadastrar Fornecedor</a></li>
+</ul>
+</li>
+<li>
+<a href="javascript:;" data-toggle="collapse" data-target="#down-estoque"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;&nbsp;Estoque<i class="fa fa-caret-down pull-right"></i></a>
+<ul id="down-estoque" class="collapse">
+<li><a href="EntradaProduto.html"><i class="fa fa-cart-arrow-down"></i>&nbsp;Entrada de produto</a></li>
+<li><a href="PesquisarProduto.html"><i class="fa fa-search"></i>&nbsp;Pesquisa de produto</a></li>
+<li><a href="CadastrarProduto.html"><i class="fa fa-cart-plus"></i>&nbsp;Cadastro de Produto</a></li>
+</ul>
+</li>
+<li>
+<a href="javascript:;" data-toggle="collapse" data-target="#down-gerencia"><i class="fa fa-suitcase fa-lg"></i>&nbsp;&nbsp;Gerencia<i class="fa fa-caret-down pull-right"></i></a>
+<ul id="down-gerencia" class="collapse">
+<li><a href="CadastrarFuncionario.html"><i class="fa fa-user-plus"></i>&nbsp;Cadastrar funcionario</a></li>
+<li><a href="PesquisarFuncionario.html"><i class="fa fa-search"></i>&nbsp;Pesquisar funcionario</a></li>
+</ul>
+</li>
+<li>
+<a href="javascript:;" data-toggle="collapse" data-target="#down-relatorios"><i class="fa fa-line-chart fa-lg"></i>&nbsp;&nbsp;Relatorios<i class="fa fa-caret-down pull-right"></i></a>
+<ul id="down-relatorios" class="collapse">
+<li><a href="RelatorioVendaPeriodo.html"><i class="fa fa-calendar-check-o"></i>&nbsp;Relatorio de vendas por periodo</a></li>
+<li><a href="RelatorioVendaVendedor.html"><i class="fa fa-balance-scale"></i>&nbsp;Relatorio de venda por vendedor</a></li>
+</ul>
+</li>
+
+</ul> 
+</div>
+</nav>
+<!--Menu feito para todas as paginas -->
+    <div id="page-wrapper">
+        <div class="container col-md-12">
+        <form class="form-horizontal col-md-offset-2 col-md-8 ">
+           <h1 class="text-center"><strong><em>Formulario de fornecedor</em></strong></h1>
+           <br>
+           <div class="row">
+                <div class="col-md-6">    
+                    <div class="form-group">
+                        <label for="razaoSocialTbx">Razao Social</label>
+                        <input type="text" class="form-control" id="razaoSocialTbx" placeholder="Razão social" name="fornecedor.razaoSocial" value="${fornecedor.razaoSocial}" />
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-push-1">    
+                    <div class="form-group">
+                        <label for="nomeFantasiaTbx">Nome fantasia</label>
+                        <input type="text" class="form-control" id="nomeFantasiaTbx" placeholder="Nome fantasia" name="fornecedor.nomeFantasia" value="${fornecedor.nomeFantasia}" />
+                    </div>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cnpjTbx">CNPJ</label>
+                        <input type="text" class="form-control" id="cnpjTbx" placeholder="CPF" name="fornecedor.cnpj" value="${fornecedor.cnpj}" data-mask="99.999.999/9999-99" />
+                    </div>
+                    <div class="form-group">
+                        <label for="emailPrimarioTbx">Email primario</label>
+                        <input type="email" class="form-control" id="emailPrimarioTbx" placeholder="Data de nascimento" name="fornecedor.emailPrimario" value="${fornecedor.emailPrimario}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="emailSecundarioTbx">Email secundario</label>
+                        <input type="email" class="form-control" id="emailSecundarioTbx" placeholder="Data de nascimento" name="fornecedor.emailSecundario" value="${fornecedor.emailSecundario}" />
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-5 col-md-push-1">
+                    <div class="radio borda">
+                       <h4 class="text-center">Situação</h4>
+                       <div class="col-md-offset-2">
+                        <label class="col-md-12">
+                            <input type="radio" name="situacao" id="ativoRb" value="situacao.ativo" checked>
+                            Ativo  
+                        </label>
+                        <label>
+                            <input type="radio" name="situacao" id="inativoRb" value="situacao.inativo" >
+                            Inativo  
+                        </label>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="telefoneResidencialTbx">Telefone Residencial</label>
+                        <input type="text" class="form-control" id="telefoneResidencialTbx" placeholder="Telefone Residencial" name="fornecedor.telefoneResidencial" value="${fornecedor.telefoneResidencial}" data-mask="(99)9999-9999" />
+                    </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="telefoneComercialTbx">Telefone Comercial</label>
+                        <input type="text" class="form-control" id="telefoneComercialTbx" placeholder="Telefone comercial" name="fornecedor.telefoneComercial" value="${fornecedor.telefoneComercial}" data-mask="(99)9999-9999" />
+                    </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="celularTbx">Celular</label>
+                        <input type="text" class="form-control" id="celularTbx" placeholder="Celular" name="fornecedor.celular" value="${fornecedor.celular}" data-mask="(99)9-9999-9999"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="logradouroTbx">Logradouro</label>
+                        <input type="text" class="form-control" id="logradouroTbx" placeholder="Logradouro" name="fornecedor.endereco.logradouro" value="${fornecedor.endereco.logradouro}" />
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-push-1">
+                    <div class="form-group">
+                        <label for="numeroTbx">Numero</label>
+                        <input type="text" class="form-control" id="numeroTbx" placeholder="Numero" name="fornecedor.endereco.numero" value="${fornecedor.endereco.numero}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="complementoTbx">Complemento</label>
+                        <input type="text" class="form-control" id="complementoTbx" placeholder="Complemento" name="fornecedor.endereco.complemento" value="${fornecedor.endereco.complemento}" />
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-push-1">
+                    <div class="form-group">
+                        <label for="bairroTbx">Bairro</label>
+                        <input type="text" class="form-control" id="bairroTbx" placeholder="Bairro" name="fornecedor.endereco.bairro" value="${fornecedor.endereco.bairro}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="cidadeTbx">Cidade</label>
+                        <input type="text" class="form-control" id="cidadeTbx" placeholder="Cidade" name="fornecedor.endereco.cidade" value="${fornecedor.endereco.cidade}" />
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-push-1">
+                     <div class="form-group">
+                        <label for="cepTbx">CEP</label>
+                        <input type="text" class="form-control" id="cepTbx" placeholder="CEP" name="fornecedor.endereco.cep" value="${fornecedor.endereco.cep}" data-mask="99999-999"/>
+                    </div>
+                </div>
+                <div class="col-md-1 col-md-push-2">
+                     <div class="form-group">
+                        <label for="ufTbx">UF</label>
+                        <input type="text" class="form-control" id="ufTbx" placeholder="UF" name="fornecedor.endereco.uf" value="${fornecedor.endereco.uf}" data-mask="AA" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="observacaoTbx">Observação</label>
+                        <textarea class="form-control col-md-12" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-md-6 col-md-push-8">
+                <button type="submit" class="btn btn-danger col-md-4 col-md-pull-1" ><span class="glyphicon glyphicon-remove"></span>Cancelar</button>
+                <button type="submit" class="btn btn-success col-md-4 " ><span class="glyphicon glyphicon-floppy-save"></span>Salvar</button>
+                <br>
+                <br>
+                <br>
+                </div>
+            </div>
+        </form>
+        </div>
+       </div>
+    </div>
+    
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mask.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/morris/raphael.min.js"></script>
+<script src="js/plugins/morris/morris.min.js"></script>
+<script src="js/plugins/morris/morris-data.js"></script>
+</body>
+</html>

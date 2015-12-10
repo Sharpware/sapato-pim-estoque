@@ -14,10 +14,11 @@ public class Estoque {
     @Column(name="id")
     private Long id;
 
-    @Column(name="produto_id")
-    private Produto produto; 
+    @OneToOne
+    @JoinColumn(name="produto")
+    private Produto produto;
     
-    @Column(name="quantidade")
+    @Column(name="quantidade_produto")
     private int quantidade;
 
     @Temporal(TemporalType.DATE)
